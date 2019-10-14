@@ -26,7 +26,7 @@ class A2CheckerV2(unittest.TestCase):
     def test_compare(self):
         print("\ncompare_elevations_within_row:")
         self.m_x = [[1, 2, 3], [5, 6, 5], [4, 5, 8]]
-        self.assertListEqual(e.compare_elevations_within_row(self.m_x, 0, 2), [1, 1, 0], "contain equal")
+        self.assertListEqual(e.compare_elevations_within_row(self.m_x, 0, 2), [1, 1, 1], "contain equal")
         self.assertListEqual(e.compare_elevations_within_row(self.m_x, 1, 6), [2, 1, 0], "contain equal")
         self.assertListEqual(e.compare_elevations_within_row(self.m_x, 2, 7), [2, 0, 1], "simple")
         self.assertListEqual(e.compare_elevations_within_row(self.m_3, 0, 10), [0, 0, 3], "simple")
