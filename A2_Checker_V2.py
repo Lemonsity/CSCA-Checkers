@@ -72,7 +72,7 @@ class A2CheckerV2(unittest.TestCase):
         self.assertListEqual(e.find_peak(self.m_5), [0, 4], "simple")
 
     def test_is_sink(self):
-        print("is_sink:", end = " ")
+        print("\nis_sink:", end = " ")
         self.assertTrue(e.is_sink(self.m_1, [0, 0]), "edge case no surrounding")
         self.assertFalse(e.is_sink(self.m_1, [1, 1]), "out of bound")
         self.assertFalse(e.is_sink(self.m_2, [0, 0]), "special case diagonal")
@@ -100,7 +100,7 @@ class A2CheckerV2(unittest.TestCase):
         self.assertListEqual(e.find_local_sink(self.m_5, [2, 3]), [3, 3], "simple")
 
     def test_hike(self):
-        print("can_hike_to:", end = " ")
+        print("\ncan_hike_to:", end = " ")
         self.assertTrue(e.can_hike_to(self.m_3, [2, 2], [0, 2], 100), "simple")
         self.assertTrue(e.can_hike_to(self.m_3, [2, 2], [0, 2], 14), "edge case end with 0")
         self.assertFalse(e.can_hike_to(self.m_3, [2, 2], [0, 2], 13), "simple not enough")
